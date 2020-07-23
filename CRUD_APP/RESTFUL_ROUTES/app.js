@@ -88,7 +88,7 @@ app.get("/books/new", function(req, res){
 
 // CREATE ROUTE  create a new book in our database namely Books
 app.post("/books", function(req, res){
-    // create blog
+    // create book
     console.log(req.body);
     console.log("===========")
     req.body.book.body = req.sanitize(req.body.book.body)
