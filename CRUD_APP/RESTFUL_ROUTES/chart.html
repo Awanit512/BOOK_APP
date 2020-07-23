@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RESTFUL Routes</title>
+<!-- 	<link rel="stylesheet" type="text/css" href="bootstrap.css"> -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+</head>
+<body>
+
+	<div class="container">
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-10">
+			<div class="jumbotron">
+				<h1>RESTFUL Routes</h1>
+				<p>A table of some important RESTful routes </p>
+			</div>
+			<table class="table table-hover table-bordered">
+			<thead>	
+				<tr>
+					<th>Name</th>
+					<th>Path</th>
+					<th>HTTP Verb</th>
+					<th>Purpose</th>
+					<th>Mongoose Method</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Index</td>
+					<td>/books</td>
+					<td>GET</td>
+					<td>List all books present in our database</td>
+					<td>book.find()</td>
+				</tr>
+				<tr class="success">
+					<td>New</td>
+					<td>/books/new</td>
+					<td>GET</td>
+					<td>Show new book form</td>
+					<td>N/A</td>
+				</tr>
+				<tr class="success">
+					<td>Create</td>
+					<td>/books</td>
+					<td>POST</td>
+					<td>Create a new book, then redirect somewhere</td>
+					<td>book.create()</td>
+				</tr>
+				<tr class="info">
+					<td>Show</td>
+					<td>/books/:id</td>
+					<td>GET</td>
+					<td>Show info about one specific book</td>
+					<td>book.findById()</td>
+				</tr>
+				<tr class="warning">
+					<td>Edit</td>
+					<td>/books/:id/edit</td>
+					<td>GET</td>
+					<td>Show edit form for one book</td>
+					<td>book.findById()</td>
+				</tr>
+				<tr class="warning">
+					<td>Update</td>
+					<td>/books/:id</td>
+					<td>PUT</td>
+					<td>Update particular book, then redirect somewhere</td>
+					<td>book.findByIdAndUpdate()</td>
+				</tr>
+				<tr class="danger">
+					<td>Destroy</td>
+					<td>/books/:id</td>
+					<td>DELETE</td>
+					<td>Delete a particular book, then redirect somewhere</td>
+					<td>book.findByIdAndRemove()</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+	</div>	
+</body>
+</html>
